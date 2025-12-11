@@ -30,6 +30,7 @@ hf download TencentGameMate/chinese-wav2vec2-base model.safetensors \
     --local-dir ./weights/chinese-wav2vec2-base
 wget -O weights/Wan2.1_I2V_14B_FusionX_LoRA.safetensors \
     "https://huggingface.co/vrgamedevgirl84/Wan14BT2VFusioniX/resolve/main/FusionX_LoRa/Wan2.1_I2V_14B_FusionX_LoRA.safetensors"
-mkdir -p /weights/InfiniteTalk/multi
+mkdir -p weights/InfiniteTalk/multi
 wget -O weights/InfiniteTalk/multi/infinitetalk.safetensors \
     "https://huggingface.co/MeiGen-AI/InfiniteTalk/resolve/main/multi/infinitetalk.safetensors"
+
