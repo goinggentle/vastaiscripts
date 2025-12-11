@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# H100
-# 120GB
+# Does not work on Blackwell
 # vastai/pytorch:2.7.0-cuda-12.8.1-py310-22.04
 
 set -eo pipefail
@@ -11,6 +10,7 @@ cd /workspace
 git clone https://github.com/MeiGen-AI/InfiniteTalk.git
 cd InfiniteTalk
 
+. /venv/main/bin/activate
 pip install -U xformers==0.0.30
 pip install misaki[en]
 pip install ninja 
@@ -34,3 +34,4 @@ wget -P weights "https://huggingface.co/vrgamedevgirl84/Wan14BT2VFusioniX/resolv
 mkdir -p weights/InfiniteTalk/multi
 wget -P weights/InfiniteTalk/multi \
     "https://huggingface.co/MeiGen-AI/InfiniteTalk/resolve/main/multi/infinitetalk.safetensors"
+
