@@ -4,7 +4,9 @@
 # 120GB
 # vastai/pytorch:2.7.0-cuda-12.8.1-py310-22.04
 
+set -eo pipefail
 touch ~/.no_auto_tmux
+
 cd /workspace
 git clone https://github.com/MeiGen-AI/InfiniteTalk.git
 cd InfiniteTalk
@@ -28,9 +30,7 @@ hf download TencentGameMate/chinese-wav2vec2-base \
 hf download TencentGameMate/chinese-wav2vec2-base model.safetensors \
     --revision refs/pr/1 \
     --local-dir ./weights/chinese-wav2vec2-base
-wget -O weights/Wan2.1_I2V_14B_FusionX_LoRA.safetensors \
-    "https://huggingface.co/vrgamedevgirl84/Wan14BT2VFusioniX/resolve/main/FusionX_LoRa/Wan2.1_I2V_14B_FusionX_LoRA.safetensors"
+wget -P weights "https://huggingface.co/vrgamedevgirl84/Wan14BT2VFusioniX/resolve/main/FusionX_LoRa/Wan2.1_I2V_14B_FusionX_LoRA.safetensors"
 mkdir -p weights/InfiniteTalk/multi
-wget -O weights/InfiniteTalk/multi/infinitetalk.safetensors \
+wget -P weights/InfiniteTalk/multi \
     "https://huggingface.co/MeiGen-AI/InfiniteTalk/resolve/main/multi/infinitetalk.safetensors"
-
