@@ -4,7 +4,6 @@
 # vastai/pytorch:2.7.0-cuda-12.8.1-py310-22.04
 
 set -eo pipefail
-touch ~/.no_auto_tmux
 
 cd /workspace
 git clone https://github.com/MeiGen-AI/InfiniteTalk.git
